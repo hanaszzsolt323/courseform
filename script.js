@@ -27,7 +27,7 @@ class UI {
         e.preventDefault();
 
         // IF FIELDS ARE FILLED
-        if(nameInput.value != '' || courseInput.value != '' || authorInput.value != '') {
+        if(nameInput.value != '' && courseInput.value != '' && authorInput.value != '') {
             // CREATE NEW COURSE OBJECT
             const newCourse = new Course(nameInput.value, courseInput.value, authorInput.value);
 
