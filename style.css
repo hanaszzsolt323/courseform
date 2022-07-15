@@ -8,6 +8,8 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
+
+
 /* MAIN */
 .main {
     /* height: 100vh; */
@@ -16,7 +18,7 @@ body {
     display: grid;
     justify-items: center;
     row-gap: 1rem;
-    grid-template-rows: 1.5fr 2fr;
+    grid-template-rows: 1.5fr 0.1fr 2fr;
 }
 
 /* INPUTS */
@@ -141,3 +143,19 @@ body {
     align-items: center;
     display: none;
 }
+
+.loading {
+    color: saddlebrown;
+    font-size: 3rem;
+    justify-self: center;
+    transition: 3s;
+    animation: rotate 3s;
+    display: none;
+}
+
+@keyframes rotate {
+    100% {transform: rotate(8520deg)}
+}
+
+
+

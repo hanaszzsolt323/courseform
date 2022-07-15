@@ -5,6 +5,9 @@ const courseInput = document.querySelector('.course');
 const authorInput = document.querySelector('.author');
 const error = document.querySelector('.error');
 
+// LOADING
+const loading = document.querySelector('.loading');
+
 // OUTPUT ITEMS 
 const nameOutput = document.querySelector('.nameOutput');
 const courseOutput = document.querySelector('.courseOutput');
@@ -31,8 +34,11 @@ class UI {
             // CREATE NEW COURSE OBJECT
             const newCourse = new Course(nameInput.value, courseInput.value, authorInput.value);
 
+            // MAKE LOADING ICON APPEAR
+            loading.style.display = 'block';
 
-            // OUTPUT NEW COURSE
+            setTimeout(() => {
+                // OUTPUT NEW COURSE AFTER 3S
             courses.innerHTML += `
             <div class="courseBox">
                 <div class="nametext">
@@ -42,6 +48,13 @@ class UI {
                 <div class="authorText">
                     <h2 class="courseBoxAuthor">Author:</h2><span class="authorOutput">${newCourse.author}</span></div>
             </div>`;
+
+            // MAKE LOADING ICON DISAPPEAR 
+            loading.style.display = 'none';
+            }, 3000)
+
+            
+
 
             
 
