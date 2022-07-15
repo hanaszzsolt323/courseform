@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ff9a26a1ab.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
     <title>OOP Course Form Project</title>
 </head>
@@ -14,16 +15,19 @@
     <main class="main">
         <form class="inputs">
             <h1>Get A Free Course</h1>
-            <input type="text" class="name" minlength="1" placeholder="Costumer Name...">
-            <input type="text" class="course" minlength="1" placeholder="Course...">
-            <input type="text" class="author" minlength="1" placeholder="Author...">
-            <input type="submit" class="submit" value="Submit">
+            <div class="input"><i class="fa-solid fa-user"></i><input type="text" class="name" minlength="1" placeholder="Costumer Name..."></div>
+            <div class="input"><i class="fa-solid fa-book"></i><input type="text" class="course" minlength="1" placeholder="Course..."></div>
+            <div class="input"><i class="fa-solid fa-circle-user"></i><input type="text" class="author" minlength="1" placeholder="Author..."></div>
+            <input type="submit" class="submit" value="Submit"></div>
         </form>
         <div class="courses">
             <div class="courseBox">
-                <h2>Name: <span class="costumerName">John Anderson</span></h2>
-                <h2>Course: <span class="courseName">CSS Basics</span></h2>
-                <h2>Author: <span class="authorName">John Anderson</span></h2>
+                <div class="nametext">
+                    <h2 class="courseBoxName">Name:</h2><span class="nameOutput">John Anderson</span></div>
+                <div class="courseText">
+                    <h2 class="courseBoxCourse">Course:</h2><span class="courseOutput">CSS Basics</span></div>
+                <div class="authorText">
+                    <h2 class="courseBoxAuthor">Author:</h2><span class="authorOutput">John Anderson</span></div>
             </div>
         </div>
     </main>
