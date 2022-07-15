@@ -47,7 +47,14 @@ class UI {
                     <h2 class="courseBoxCourse">Course:</h2><span class="courseOutput">${newCourse.course}</span></div>
                 <div class="authorText">
                     <h2 class="courseBoxAuthor">Author:</h2><span class="authorOutput">${newCourse.author}</span></div>
+                <div class="deleteButton"><a href="#" class="delete"><i class="fa-solid fa-ban"></i></a></div>
             </div>`;
+
+            // CREATING DELETE EVENT
+            const deleteButtons = document.querySelectorAll('.delete'); // SELECT ALL DEL BUTTONS
+            deleteButtons.forEach((deleteBtn) => { // AND GOING THROUGH EACH OF THEM
+                deleteBtn.addEventListener('click', UI.deleteItem); // TO ADD EVENT TO EACH OF THEM
+            }) 
 
             // MAKE LOADING ICON DISAPPEAR 
             loading.style.display = 'none';
@@ -76,8 +83,18 @@ class UI {
         nameInput.value = '';
         courseInput.value = '';
         authorInput.value = '';
+    } 
+
+    // DELETE ITEM
+    static deleteItem(e) {
+        e.preventDefault();
+
+        const parent = e.target.parentElement.parentElement.parentElement;
+        courses.removeChild(parent);
     }
 }
 
 // CREATE COURSE EVENT
 form.addEventListener('submit', UI.showCourse);
+
+

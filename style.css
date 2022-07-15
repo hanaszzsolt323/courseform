@@ -76,7 +76,7 @@ body {
 .courses {
     padding: 1rem;
     width: 90%;
-    background-color: rgba(49, 49, 49, 0.151);
+    /* background-color: rgba(49, 49, 49, 0.151); */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 1rem;
@@ -90,11 +90,37 @@ body {
     border-radius: 0.5rem;
     padding: 0.5rem;
     height: fit-content;
+    width: 15rem;
 
     display: grid;
     row-gap: 0.5rem;
     align-content: center;
+    grid-template-columns: 80% 20%;
+    grid-template-areas: 
+    'name delete'
+    'course delete'
+    'author delete';
 }
+
+.nameText {
+    grid-area: name;
+}
+
+.courseText {
+    grid-area: course;
+}
+
+.authorText {
+    grid-area: author;
+}
+
+.deleteButton {
+    /* background-color: brown; */
+    grid-area: delete;
+    justify-items: center;
+}
+
+
 
 /* COURSEBOX INSIDE */
 
@@ -155,6 +181,16 @@ body {
 
 @keyframes rotate {
     100% {transform: rotate(8520deg)}
+}
+
+.delete {
+    color: red;
+    font-size: 1.5rem;
+    transition: 0.5s;
+}
+
+.delete:hover {
+    color: rgb(177, 2, 2);
 }
 
 
